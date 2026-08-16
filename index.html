@@ -8,6 +8,7 @@ var id = params.get('id');
 var tag = params.get('tag');
 var view = params.get('view');
 var cal = params.get('cal');
+var mail = params.get('mail');
 if (id) {
   window.location.href = 'omnifocus:///task/' + id;
 } else if (tag) {
@@ -15,7 +16,9 @@ if (id) {
 } else if (view) {
   window.location.href = 'omnifocus:///' + view;
 } else if (cal) {
-  window.location.href = 'calshow:';
+  window.location.href = 'shortcuts://run-shortcut?name=OpenCalendarMonth';
+} else if (mail) {
+  window.location.href = 'ms-outlook://';
 }
 </script>
 <p>Öppnar …</p>
