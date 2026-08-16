@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Öppnar OmniFocus</title></head>
+<body>
+<script>
+var id = new URLSearchParams(window.location.search).get('id');
+if (id) { window.location.href = 'omnifocus:///task/' + id; }
+</script>
+<p>Öppnar OmniFocus …</p>
+</body>
+</html>
