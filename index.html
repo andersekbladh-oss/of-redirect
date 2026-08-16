@@ -3,9 +3,22 @@
 <head><meta charset="utf-8"><title>Öppnar OmniFocus</title></head>
 <body>
 <script>
-var id = new URLSearchParams(window.location.search).get('id');
-if (id) { window.location.href = 'omnifocus:///task/' + id; }
+var params = new URLSearchParams(window.location.search);
+var id = params.get('id');
+var tag = params.get('tag');
+if (id) {
+  window.location.href = 'omnifocus:///task/' + id;
+} else if (tag) {
+  window.location.href = 'omnifocus:///tag/' + tag;
+}
 </script>
 <p>Öppnar OmniFocus …</p>
 </body>
 </html>
+
+Commit ändringen — Render bygger om automatiskt inom någon minut. Säg till när det är gjort så uppdaterar jag rutinen med det nya namnet "Tags 1-6 Uppgifter" och klickbara tagglänkar.
+
+Sources:
+
+OmniFocus: Tags — Omni Automation
+URL Scheme to filter by perspective and tag — Omni Group forums
