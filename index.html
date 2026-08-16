@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"><title>Öppnar OmniFocus</title></head>
+<head><meta charset="utf-8"><title>Öppnar app</title></head>
 <body>
 <script>
 var params = new URLSearchParams(window.location.search);
 var id = params.get('id');
 var tag = params.get('tag');
 var view = params.get('view');
+var cal = params.get('cal');
 if (id) {
   window.location.href = 'omnifocus:///task/' + id;
 } else if (tag) {
   window.location.href = 'omnifocus:///tag/' + tag;
 } else if (view) {
   window.location.href = 'omnifocus:///' + view;
+} else if (cal) {
+  window.location.href = 'calshow:';
 }
 </script>
-<p>Öppnar OmniFocus …</p>
+<p>Öppnar …</p>
 </body>
 </html>
